@@ -1,0 +1,116 @@
+@import "./styles/variables.scss";
+@import "./styles/buttons.scss";
+@import "./styles/modal.scss";
+
+* {
+  margin: 0;
+}
+
+body {
+  background-color: $body-color;
+  color: $main-text-color;
+  font-family: "Comic Neue", cursive;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+.container {
+  max-width: 1220px;
+  margin: 0 auto;
+  padding: 5px;
+}
+
+.main-cars {
+  display: flex;
+  flex-direction: column;
+}
+
+header {
+  margin-top: 5px;
+}
+
+.settings-control,
+.car-line,
+button {
+  margin-bottom: 5px;
+}
+
+.control {
+  display: flex;
+  > * {
+    margin: 2px;
+  }
+}
+
+.car-block,
+.flag-block {
+  height: 30px;
+  width: 60px;
+}
+
+.car-line {
+  border-bottom: $border-color 2px dashed;
+}
+
+.car-way {
+  position: relative;
+}
+
+.car-svg {
+  position: absolute;
+  fill: #00ffff;
+}
+
+.flag-svg {
+  fill: #fd3f3f;
+}
+
+.flag-block {
+  position: absolute;
+  left: calc(min(70vw, #{$width-container} * 0.7) + 18px);
+}
+
+.main {
+  flex: 1;
+}
+
+.line-options,
+.line-road {
+  display: flex;
+  > * {
+    margin-right: 5px;
+  }
+}
+
+.line-road {
+  position: relative;
+}
+
+.page {
+  margin-bottom: 10px;
+}
+
+.winners {
+  display: none;
+}
+
+.table {
+  text-align: left;
+}
+
+#countWinsCeil {
+  width: 15%;
+
+  &:hover {
+    cursor: pointer;
+  }
+}
+
+#timeWinCeil {
+  width: 25%;
+  
+  &:hover {
+    cursor: pointer;
+  }
+}

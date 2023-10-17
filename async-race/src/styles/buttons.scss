@@ -1,0 +1,70 @@
+button {
+  padding: 5px 23px;
+  background-color: $btn-hover-color;
+  border: $main-text-color 2px solid;
+  transition: all 0.3s ease;
+  border-radius: 5px;
+  text-transform: uppercase;
+
+  &._blue {
+    background-color: $add-btn-color;
+    border: $add-btn-border-color 2px solid;
+  }
+  &:hover {
+    background-color: $border-color;
+    border: $add-btn-border-color 2px solid;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    &._blue {
+      background-color: $add-btn-hover-color;
+      border: $border-color 2px solid;
+    }
+  }
+  &:active {
+    background-color: $main-text-color;
+    border: $border-color 2px solid;
+    transition: all 0.1s ease;
+    &._blue {
+      background-color: $add-btn-active-color;
+      border: $add-btn-border-color 2px solid;
+    }
+  }
+
+  &.road {
+    background-color: $black;
+    border: $border-color 2px solid;
+    color: $border-color;
+    &:hover {
+      background-color: $road-btn-hover-color;
+    }
+    &:active {
+      background-color: $road-btn-active-color;
+    }
+  }
+
+  &.option-btn {
+    text-transform: lowercase;
+  }
+
+  &._b {
+    border: $btnB-color 2px solid;
+    color: $btnB-color;
+  }
+
+  &[disabled] {
+    background-color: $disabled-color;
+    border: $disabled-color 2px solid;
+    color: $black;
+    &:hover,
+    &:active {
+      background-color: $disabled-color;
+      border: $disabled-color 2px solid;
+      cursor: default;
+    }
+  }
+}
+
+.button.road,
+.button.option-btn {
+  padding: 1px 6px;
+}
